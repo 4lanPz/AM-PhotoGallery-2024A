@@ -173,8 +173,24 @@ En este caso vamos a utilizar la tab 2 para mostrar las imágenes
 
 ```
 Con esto lo que hacemos es que las imagenes se vayan almacenando en un grid para que cada una vaya alojandose en un nuevo espacio y que no importe cuantas fotos haya, todas se muestren y asi mismo el boton de eliminar se muestre debajo de cada una de ellas
+- 5 SplashScreen
+Para hacer que nuestra aplicación tenga una imagen personalizada al momento de ejecutar la imagen en android necesitaremos hacer primero el build de la aplicacion con:
+```bash
+npx ionic build android
+npx ionic capacitor open android
+```
+Ahora en nuestro entorno debe haberse creado una carpeta Android, en la cual deberemos ir a:
+```bash
+nombreproyecto/
+├── Android/
+│   ├── app/
+│   │   ├── src/
+|   |   |   ├── main/
+|   |   |   |   ├── res/
 
-- 5 Ejecución
+```
+dentro de esta carpeta encontraremos varias carpetas que dentro de esta tienen un archivo llamado splash.png, para cambiarlo necesitaremos una imagen y reemplazar las que ya se encontraban en el los directorios
+- 6 Ejecución
 Para poder ejecutar nuestro proyecto simplemente necesitamos ejecutar el comando
 ```bash
 Npx ionic s
