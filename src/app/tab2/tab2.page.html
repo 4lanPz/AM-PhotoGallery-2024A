@@ -1,16 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Photo Gallery </ion-title>
+    <ion-title>
+      Photo Gallery
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-row>
-    <ion-grid
-      size="6"
-      *ngFor="let photo of photoService.photos; index as position"
-    >
-      <ion-img [src]="photo.webviewPath"></ion-img>
+    <ion-grid size="6" *ngFor="let Photo of photoService.photos; let i = index">
+      <ion-img [src]="Photo.webviewPath"></ion-img>
+      <ion-button (click)="deletePhoto(i)" color="danger">Delete</ion-button>
     </ion-grid>
   </ion-row>
 </ion-content>
