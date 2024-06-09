@@ -2,6 +2,11 @@
 
 Hacer un aplicacion básica de cámara que almacene las fotos utilizando Ionic, Visual Studio Code y Android Studio
 
+## Clonar
+```bash
+Git clone https://github.com/4lanPz/AM-PhotoGallery-2024A
+```
+
 ## Pasos
 
 - 1 Pre requisitos
@@ -35,7 +40,7 @@ npm install
 ```
 
 - 4 Funcionalidades
-Para que funcione correctamente las funciones de tomar y guardar las fotos en la galleria, es necesario el servicio de camera y save picture
+Para que funcione correctamente las funciones de tomar y guardar las fotos en la galería, es necesario el servicio de camera y save picture
 
 Para ello necesitaremos utilizar la API de Filesystem, en este se debe configurar la funcionalidades despues de instalar los capacitors con:
 ```bash
@@ -45,12 +50,12 @@ npm install @capacitor/splash-screen
 ```
 Ahora ya con todo instalado correctamente podemos pasar a iniciar el servicio de la camara y el almacenamiento de las imagenes creando un directorio llamado services
 ```bash
-ionic g service services/photo
+npx ionic g service services/photo
 
 ```
 Dentro de esta carpeta necesitaremos editar el archivo "Photo.service.ts" 
 En este archivo vamos a codificar todos los datos necesarios para la funcionalidad de poder guardar datos y cargar datos.
-Para ello necesitaremos crear clases asunc para poder guardar las fotos como addNewToGallery, que cada vez que tome una foto esta se podra guardar con un save Picture
+Para ello necesitaremos crear clases async para poder guardar las fotos como addNewToGallery, que cada vez que tome una foto esta se podra guardar con un save Picture
 
 ```bash
 // toma la foto
@@ -135,7 +140,7 @@ public async deletePhoto(index: number) {
 ```
 
 Ahora ya con todas las funcionalidades codificadas podemos editar el HTML para que esto funcione con un botón y que las imagenes se muestren.
-En este caso vamos a utilizar la tab 2 para mostrar las imágenes
+En este caso vamos a utilizar la tab 2 para mostrar las imágenes, por lo que la vamos a editar para que muestre las imágenes.
 ```bash
 <ion-header [translucent]="true">
   <ion-toolbar>
@@ -189,7 +194,7 @@ nombreproyecto/
 |   |   |   |   ├── res/
 
 ```
-dentro de esta carpeta encontraremos varias carpetas que dentro de esta tienen un archivo llamado splash.png, para cambiarlo necesitaremos una imagen y reemplazar las que ya se encontraban en el los directorios
+Dentro de esta carpeta encontraremos varias carpetas que dentro de esta tienen un archivo llamado splash.png, para cambiarlo necesitaremos una imagen y reemplazar las que ya se encontraban en el los directorios
 - 6 Ejecución
 Para poder ejecutar nuestro proyecto simplemente necesitamos ejecutar el comando
 ```bash
